@@ -1,0 +1,14 @@
+#!/bin/sh
+
+mkdir "$1 at `date`"
+cd "$1 at `date`" && mkdir about_me my_friends my_system_info;
+cd about_me && mkdir personal professional;
+cd personal && echo $2 > facebook.txt;
+cd -;
+cd professional && echo $3 > linkedin.txt;
+cd .. && cd ..;
+cd my_system_info && printf "My username: %s \n" `whoami` > about_this_laptop.txt;
+echo "With host: `uname -a`" >> about_this_laptop.txt;
+echo `ping -c 3 google.com` > internet_connection.txt;
+cd .. && cd my_friends;
+echo `curl https://gist.githubusercontent.com/tegarimansyah/e91f335753ab2c7fb12815779677e914/raw/94864388379fecee450fde26e3e73bfb2bcda194/list%2520of%2520my%2520friends.txt` > list_of_my_friends.txt
