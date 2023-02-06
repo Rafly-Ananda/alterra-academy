@@ -13,3 +13,8 @@ export interface TodosListProps {
     deleteTask: (e:React.MouseEvent, task: Task) => void;
     toggleTaskState: (task: Task) => void;
 }
+
+export interface HomeProps {
+    taskList: Task[]
+    setTaskList: React.Dispatch<React.SetStateAction<Task[]>>
+}
