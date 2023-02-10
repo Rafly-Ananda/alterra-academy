@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "c340af86-3609-4dd1-b190-b084cd537f28",
+		"name": "alterra-day-8-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18026245"
+	},
+	"item": [
+		{
+			"name": "newsapi",
+			"item": [
+				{
+					"name": "All articles about Bitcoin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsapi}}/everything?q=bitcoin&apiKey=fc9123e99022498783a5a234ee4ae834",
+							"host": [
+								"{{newsapi}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "bitcoin"
+								},
+								{
+									"key": "apiKey",
+									"value": "fc9123e99022498783a5a234ee4ae834"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All articles mentioning Apple from yesterday, sorted by popular publishers first",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsapi}}/everything?q=apple&from=2023-02-09&to=2023-02-09&sortBy=popularity&apiKey=fc9123e99022498783a5a234ee4ae834",
+							"host": [
+								"{{newsapi}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "apple"
+								},
+								{
+									"key": "from",
+									"value": "2023-02-09"
+								},
+								{
+									"key": "to",
+									"value": "2023-02-09"
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity"
+								},
+								{
+									"key": "apiKey",
+									"value": "fc9123e99022498783a5a234ee4ae834"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All articles published by TechCrunch and The Next Web",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsapi}}/everything?domains=techcrunch.com,thenextweb.com&apiKey=fc9123e99022498783a5a234ee4ae834",
+							"host": [
+								"{{newsapi}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "domains",
+									"value": "techcrunch.com,thenextweb.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "fc9123e99022498783a5a234ee4ae834"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top headlines from BBC News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsapi}}/top-headlines?sources=bbc-news&apiKey=fc9123e99022498783a5a234ee4ae834",
+							"host": [
+								"{{newsapi}}"
+							],
+							"path": [
+								"top-headlines"
+							],
+							"query": [
+								{
+									"key": "sources",
+									"value": "bbc-news"
+								},
+								{
+									"key": "apiKey",
+									"value": "fc9123e99022498783a5a234ee4ae834"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top headlines about Trump",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{newsapi}}/top-headlines?q=trump&apiKey=fc9123e99022498783a5a234ee4ae834",
+							"host": [
+								"{{newsapi}}"
+							],
+							"path": [
+								"top-headlines"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "trump"
+								},
+								{
+									"key": "apiKey",
+									"value": "fc9123e99022498783a5a234ee4ae834"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "swapi",
+			"item": [
+				{
+					"name": "People",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapi}}/people/",
+							"host": [
+								"{{swapi}}"
+							],
+							"path": [
+								"people",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Planets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapi}}/planets/",
+							"host": [
+								"{{swapi}}"
+							],
+							"path": [
+								"planets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Films",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapi}}/films/",
+							"host": [
+								"{{swapi}}"
+							],
+							"path": [
+								"films",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Species",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapi}}/species/",
+							"host": [
+								"{{swapi}}"
+							],
+							"path": [
+								"species",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Starships",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{swapi}}/starships/",
+							"host": [
+								"{{swapi}}"
+							],
+							"path": [
+								"starships",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RentABook API",
+			"item": [
+				{
+					"name": "Get all book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rent_a_book_api}}/sepulsa/RentABook-API/1.0.0/book",
+							"host": [
+								"{{rent_a_book_api}}"
+							],
+							"path": [
+								"sepulsa",
+								"RentABook-API",
+								"1.0.0",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client_id\": 1234,\r\n    \"client_key\": \"CLIENT01\",\r\n    \"client_secret\": \"SECRET01\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rent_a_book_api}}/sepulsa/RentABook-API/1.0.0/book",
+							"host": [
+								"{{rent_a_book_api}}"
+							],
+							"path": [
+								"sepulsa",
+								"RentABook-API",
+								"1.0.0",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1234,\r\n    \"title\": \"Judul Buku Satu\",\r\n    \"isbn\": \"1-234-5678-9101112-13\",\r\n    \"writer\": \"Dr. Who\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rent_a_book_api}}/sepulsa/RentABook-API/1.0.0/book/1234",
+							"host": [
+								"{{rent_a_book_api}}"
+							],
+							"path": [
+								"sepulsa",
+								"RentABook-API",
+								"1.0.0",
+								"book",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{rent_a_book_api}}/sepulsa/RentABook-API/1.0.0/book/1234",
+							"host": [
+								"{{rent_a_book_api}}"
+							],
+							"path": [
+								"sepulsa",
+								"RentABook-API",
+								"1.0.0",
+								"book",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
