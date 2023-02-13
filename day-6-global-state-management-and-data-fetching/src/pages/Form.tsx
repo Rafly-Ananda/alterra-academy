@@ -28,6 +28,8 @@ const Form = () => {
     } else {
       alert(`Data Pendaftaran ${val.name} Berhasl Diterima`);
     }
+
+    // console.log(val);
   };
 
   const onFormReset = () => {
@@ -50,6 +52,7 @@ const Form = () => {
               value: /^[A-z]+$/,
               message: "Symbol or Number is not allowed",
             },
+            maxLength: { value: 10, message: "Maximum 10 character" },
           })}
           type="name"
           id="name"
