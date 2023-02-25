@@ -1,23 +1,29 @@
 services:
+#  spring-app:
+#    image: spring-app:latest
+#    build:
+#      context: .
+#    container_name: spring-app
+#    depends_on:
+#      - db
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/alterra_demo_db
+#      - SPRING_DATASOURCE_USERNAME=root
+#      - SPRING_DATASOURCE_PASSWORD=root
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop
   db:
-    container_name: postgres-alterra
+    container_name: db
     image: postgres
     environment:
       POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
+      POSTGRES_PASSWORD: alterraroot
       PGDATA: /data/postgres
-      POSTGRES_DB: alterra_demo_db
+      POSTGRES_DB: alterra_db
     volumes:
       - db:/data/postgres
     ports:
       - "5332:5432"
-    networks:
-      - db
     restart: unless-stopped
-
-networks:
-  db:
-    driver: bridge
 
 volumes:
   db:
